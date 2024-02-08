@@ -1,0 +1,82 @@
+﻿@model IEnumerable<AppVendasWeb.Models.Cliente>
+
+@{
+    ViewData["Title"] = "Cadastro de Clientes";
+}
+
+<h1 class="display-5 text-light">Cadastro de Clientes</h1>
+
+<p>
+    <a asp-action="Create" class="btn btn-outline-light align-content-center align-items-center">
+        <svg bootstrap-icon="PlusLg" width="20" height="20" aria-label="Adicionar" class="me-3"></svg>Novo Cliente
+    </a>
+</p>
+<div class="table-responsive">
+    <table class="table table-dark table-striped table-hover">
+        <thead>
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.ClienteNome)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.CPF)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Email)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.DataNascimento)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Celular)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.DataCadastro)
+                </th>
+                <th>
+                    Ativo
+                </th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.ClienteNome)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.CPF)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Email)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.DataNascimento)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Celular)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.DataCadastro)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.CadastroAtivo)
+                    </td>
+                    <td class="text-end">
+                        <a asp-action="Edit" asp-route-id="@item.ClienteId" class="text-decoration-none link-light">
+                            <svg bootstrap-icon="PencilFill" width="12" height="12" aria-label="Adicionar" class="me-2"></svg>
+                        </a>
+                        <a asp-action="Details" asp-route-id="@item.ClienteId" class="text-decoration-none link-light">
+                            <svg bootstrap-icon="CardList" width="12" height="12" aria-label="Adicionar" class="me-2"></svg>
+                        </a>
+                        <a asp-action="Delete" asp-route-id="@item.ClienteId" class="text-decoration-none link-light">
+                            <svg bootstrap-icon="Trash2" width="12" height="12" aria-label="Adicionar" class="me-2"></svg>
+                        </a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
