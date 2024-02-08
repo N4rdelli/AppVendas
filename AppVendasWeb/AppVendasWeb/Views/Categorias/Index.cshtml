@@ -1,0 +1,46 @@
+﻿@model IEnumerable<AppVendasWeb.Models.Categoria>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1 class="display-5 text-light">Categorias</h1>
+
+<p>
+    <a asp-action="Create" class="btn btn-outline-light align-content-center align-items-center">
+        <svg bootstrap-icon="PlusLg" width="20" height="20" aria-label="Adicionar" class="me-3"></svg>Nova Categoria
+    </a>
+</p>
+<div class="table-responsive">
+    <table class="table table-dark table-striped table-hover">
+        <thead>
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.CategoriaNome)
+                </th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.CategoriaNome)
+                    </td>
+                    <td>
+                        <a asp-action="Edit" asp-route-id="@item.CategoriaId" class="text-decoration-none link-light">
+                            <svg bootstrap-icon="PencilFill" width="14" height="14" aria-label="Adicionar" class="me-2"></svg>
+                        </a>
+                        <a asp-action="Details" asp-route-id="@item.CategoriaId" class="text-decoration-none link-light">
+                            <svg bootstrap-icon="CardList" width="14" height="14" aria-label="Adicionar" class="me-2"></svg>
+                        </a>
+                        <a asp-action="Delete" asp-route-id="@item.CategoriaId" class="text-decoration-none link-light">
+                            <svg bootstrap-icon="Trash2" width="14" height="14" aria-label="Adicionar" class="me-2"></svg>
+                        </a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

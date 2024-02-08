@@ -23,12 +23,12 @@
             </div>
             <div class="form-group">
                 <label asp-for="Email" class="control-label"></label>
-                <input asp-for="Email" class="form-control" />
+                <input asp-for="Email" type="email" class="form-control" />
                 <span asp-validation-for="Email" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="DataNascimento" class="control-label"></label>
-                <input asp-for="DataNascimento" class="form-control" />
+                <input asp-for="DataNascimento" type="date" class="form-control" />
                 <span asp-validation-for="DataNascimento" class="text-danger"></span>
             </div>
             <div class="form-group">
@@ -38,23 +38,24 @@
             </div>
             <div class="form-group">
                 <label asp-for="DataCadastro" class="control-label"></label>
-                <input asp-for="DataCadastro" class="form-control" />
+                <input asp-for="DataCadastro" value="@DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss")" class="form-control" readonly />
                 <span asp-validation-for="DataCadastro" class="text-danger"></span>
             </div>
-            <div class="form-group form-check">
+            <div class="form-group form-check form-switch">
                 <label class="form-check-label">
-                    <input class="form-check-input" asp-for="CadastroAtivo" /> @Html.DisplayNameFor(model => model.CadastroAtivo)
+                    <input class="form-check-input" role="switch" asp-for="CadastroAtivo" /> @Html.DisplayNameFor(model => model.CadastroAtivo)
                 </label>
             </div>
             <div class="form-group">
-                <input type="submit" value="Create" class="btn btn-primary" />
+                <input type="submit" value="Create" class="btn btn-outline-light" />
+            </div>
+            <div>
+                <a asp-action="Index" class="text-light">
+                    <svg bootstrap-icon="PencilFill" width="14" height="14" aria-label="Adicionar" class="me-2"></svg>
+                    Voltar</a>
             </div>
         </form>
     </div>
-</div>
-
-<div>
-    <a asp-action="Index">Back to List</a>
 </div>
 
 @section Scripts {
