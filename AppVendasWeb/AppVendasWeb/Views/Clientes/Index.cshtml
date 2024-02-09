@@ -3,17 +3,18 @@
 @{
     ViewData["Title"] = "Cadastro de Clientes";
 }
-
-<h1 class="display-5 textClass">Cadastro de Clientes</h1>
-
+<div>
+<h3 class="display-6 textoTitulo">Cadastro de Clientes</h3>
 <p>
     <a asp-action="Create" class="btn bttnClass align-content-center align-items-center">
         <svg bootstrap-icon="PlusLg" width="20" height="20" aria-label="Adicionar" class="me-3"></svg>Novo Cliente
     </a>
 </p>
+
+</div>
 <hr />
 <div class="table-responsive">
-    <table class="table bg-transparent textClass">
+    <table class="table bg-transparent textoCor">
         <thead>
             <tr>
                 <th>
@@ -65,7 +66,7 @@
                     <td>
                         @Html.DisplayFor(modelItem => item.CadastroAtivo)
                     </td>
-                    <td class="text-end textClass">
+                    <td class="text-end textoCor">
                         <a asp-action="Edit" asp-route-id="@item.ClienteId" class="text-decoration-none link-light">
                             <svg bootstrap-icon="PencilFill" width="14" height="14" aria-label="Adicionar" class="me-2"></svg>
                         </a>

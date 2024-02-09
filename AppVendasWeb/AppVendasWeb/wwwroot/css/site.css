@@ -1,6 +1,5 @@
 html {
     font-size: 14px;
-    color: #0f0017;
 }
 
 @media (min-width: 768px) {
@@ -23,24 +22,39 @@ body {
 }
 
 .backgroundBody {
-    background: linear-gradient(#ccc8ff, #e1e2ff );
+    background: #bdecfd;
 }
 
 .backgroundNav {
-    background: #e1e2ff;
+    background: #34AFDC;
 }
 
-.textClass {
-    color: #0f0017;
+.textoCor {
+    color: #092029;
+}
+
+.textoLink {
+    color: #fffff6;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+    .textoLink:hover {
+        color: #EE3A62;
+    }
+
+.textoTitulo {
+    font-weight: bold;
 }
 
 .bttnClass {
-    background: none;
-    border: solid 1px #0f0017;
-    color: #0f0017;
+    background: #EE3A62;
+    color: #fffff6;
+    text-transform: uppercase;
+    font-weight: bold;
 }
 
     .bttnClass:hover {
-        background: #0f0017;
-        color: #e1e2ff;
+        background: #fffff6;
+        color: #EE3A62;
     }
