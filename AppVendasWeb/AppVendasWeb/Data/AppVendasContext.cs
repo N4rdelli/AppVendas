@@ -20,7 +20,6 @@ namespace AppVendasWeb.Data
             modelBuilder.Entity<Produto>().ToTable("Produto");
             modelBuilder.Entity<Venda>().ToTable("Venda");
             modelBuilder.Entity<ItemDaVenda>().ToTable("ItemDaVenda");
-
         }
     }
 }
