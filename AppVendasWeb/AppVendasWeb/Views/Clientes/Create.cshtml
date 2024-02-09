@@ -36,17 +36,17 @@
                 <input asp-for="Celular" class="form-control" />
                 <span asp-validation-for="Celular" class="text-danger"></span>
             </div>
-            <div class="form-group">
+            <div class="form-group mb-2">
                 <label asp-for="DataCadastro" class="control-label"></label>
                 <input asp-for="DataCadastro" value="@DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss")" class="form-control" readonly />
                 <span asp-validation-for="DataCadastro" class="text-danger"></span>
             </div>
-            <div class="form-group form-check form-switch">
+            <div class="form-group form-check form-switch mb-2">
                 <label class="form-check-label">
                     <input class="form-check-input" role="switch" asp-for="CadastroAtivo" /> @Html.DisplayNameFor(model => model.CadastroAtivo)
                 </label>
             </div>
-            <div class="form-group">
+            <div class="form-group mb-2">
                 <input type="submit" value="Criar" class="btn btn-outline-light" />
             </div>
             <div>
