@@ -4,16 +4,16 @@
     ViewData["Title"] = "Index";
 }
 
-<h1 class="display-5 text-light">Produtos</h1>
+<h1 class="display-5 textClass">Produtos</h1>
 
 <p>
-    <a asp-action="Create" class="btn btn-outline-light align-content-center align-items-center">
+    <a asp-action="Create" class="btn bttnClass align-content-center align-items-center">
         <svg bootstrap-icon="PlusLg" width="20" height="20" aria-label="Adicionar" class="me-3"></svg>Novo Produto
     </a>
 </p>
 <hr/>
 <div class="table-responsive">
-    <table class="table table-dark table-striped table-hover">
+    <table class="table bg-transparent textClass">
         <thead>
             <tr>
                 <th>
@@ -42,13 +42,13 @@
                         @Html.DisplayFor(modelItem => item.Categoria.CategoriaNome)
                     </td>
                     <td class="text-end">
-                        <a asp-action="Edit" asp-route-id="@item.ProdutoId" class="text-decoration-none text-light">
+                        <a asp-action="Edit" asp-route-id="@item.ProdutoId" class="text-decoration-none textClass">
                             <svg bootstrap-icon="PencilFill" width="14" height="14" aria-label="Adicionar" class="me-2"></svg>
                         </a>
-                        <a asp-action="Details" asp-route-id="@item.ProdutoId" class="text-decoration-none text-light">
+                        <a asp-action="Details" asp-route-id="@item.ProdutoId" class="text-decoration-none textClass">
                             <svg bootstrap-icon="CardList" width="14" height="14" aria-label="Adicionar" class="me-2"></svg>
                         </a>
-                        <a asp-action="Delete" asp-route-id="@item.ProdutoId" class="text-decoration-none text-light">
+                        <a asp-action="Delete" asp-route-id="@item.ProdutoId" class="text-decoration-none textClass">
                             <svg bootstrap-icon="Trash2" width="14" height="14" aria-label="Adicionar" class="me-2"></svg>
                         </a>
                     </td>

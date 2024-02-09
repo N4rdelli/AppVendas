@@ -4,7 +4,7 @@
     ViewData["Title"] = "Details";
 }
 
-<h4 class="display-6 text-light">Detalhes do Cliente</h4>
+<h4 class="display-6 textClass">Detalhes do Cliente</h4>
 
 <div>
     <h4>Cliente</h4>
@@ -55,11 +55,11 @@
     </dl>
 </div>
 <div>
-    <a asp-action="Index" class="text-light text-decoration-none me-3">
+    <a asp-action="Index" class="textClass text-decoration-none me-3">
         <svg bootstrap-icon="Arrow90DegLeft" width="13" height="13" aria-label="Adicionar" class="me-1"></svg>
         Voltar
     </a>
-    <a asp-action="Edit" asp-route-id="@Model?.ClienteId" class="text-decoration-none btn btn-outline-light justify-content-center">
+    <a asp-action="Edit" asp-route-id="@Model?.ClienteId" class="text-decoration-none btn bttnClass justify-content-center">
         <svg bootstrap-icon="PencilFill" width="14" height="14" aria-label="Adicionar" class="me-2"></svg>
         Editar
     </a>
