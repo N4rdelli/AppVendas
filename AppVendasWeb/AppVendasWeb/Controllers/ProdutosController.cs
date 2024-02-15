@@ -26,6 +26,15 @@ namespace AppVendasWeb.Controllers
             return View(await appVendasContext.ToListAsync());
         }
 
+        public async Task<IActionResult> Search(string searchProd)
+        {
+            if (string.IsNullOrEmpty(searchProd))
+            {
+                return View("Index", await _context.Produtos.ToListAsync());
+            }
+            return View("Index", await _context.Produtos.Where(c => c.Descricao.Contains(searchProd)).ToListAsync());
+        }
+
         // GET: Produtos/Details/5
         public async Task<IActionResult> Details(Guid? id)
         {

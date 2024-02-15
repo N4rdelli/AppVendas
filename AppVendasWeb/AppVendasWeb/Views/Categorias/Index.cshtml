@@ -11,7 +11,20 @@
         <svg bootstrap-icon="PlusLg" width="20" height="20" aria-label="Adicionar" class="me-3"></svg>Nova Categoria
     </a>
 </p>
-<hr/>
+
+<hr />
+
+<div>
+    <form method="post" asp-action="Search">
+        <div class="input-group mb-3">
+            <input type="text" class="form-control" name="searchCatg" placeholder="Pesquisar categoria" aria-label="Pesquisar categoria" aria-describedby="button-addon2">
+            <button class="btn btn-outline-light" type="submit" id="button-addon2">
+                <svg bootstrap-icon="Search" width="16" height="16" aria-label="Pesquisar"></svg>
+            </button>
+        </div>
+    </form>
+</div>
+
 <div class="table-responsive">
     <table class="table bg-transparent textoCor">
         <thead>

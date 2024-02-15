@@ -12,6 +12,18 @@
     </a>
 </p>
 <hr/>
+
+<div>
+    <form method="post" asp-action="Search">
+        <div class="input-group mb-3">
+            <input type="text" class="form-control" name="searchProd" placeholder="Pesquisar produto" aria-label="Pesquisar produto" aria-describedby="button-addon2">
+            <button class="btn btn-outline-light" type="submit" id="button-addon2">
+                <svg bootstrap-icon="Search" width="16" height="16" aria-label="Pesquisar"></svg>
+            </button>
+        </div>
+    </form>
+</div>
+
 <div class="table-responsive">
     <table class="table bg-transparent textoCor">
         <thead>
