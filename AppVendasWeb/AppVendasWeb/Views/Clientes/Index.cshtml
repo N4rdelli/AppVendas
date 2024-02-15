@@ -3,7 +3,6 @@
 @{
     ViewData["Title"] = "Cadastro de Clientes";
 }
-<div>
 <h3 class="display-6 textoTitulo">Cadastro de Clientes</h3>
 <p>
     <a asp-action="Create" class="btn bttnClass align-content-center align-items-center">
@@ -11,7 +10,17 @@
     </a>
 </p>
 
+<div>
+<form method="post" asp-action="Search">
+    <div class="input-group mb-3">
+        <input type="text" class="form-control" name="searchString" placeholder="Pesquisar por nome" aria-label="Pesquisar por nome" aria-describedby="button-addon2">
+            <button class="btn btn-outline-light" type="submit" id="button-addon2">
+                <svg bootstrap-icon="Search" width="16" height="16" aria-label="Pesquisar"></svg>
+            </button>
+    </div>
+</form>
 </div>
+
 <hr />
 <div class="table-responsive">
     <table class="table bg-transparent textoCor">
@@ -36,7 +45,7 @@
                     @Html.DisplayNameFor(model => model.DataCadastro)
                 </th>
                 <th>
-                    Ativo
+                    Cadastro Ativo
                 </th>
                 <th></th>
             </tr>
@@ -63,17 +72,15 @@
                     <td>
                         @Html.DisplayFor(modelItem => item.DataCadastro)
                     </td>
-                    <td>
+                    <td class="text-end">
                         @Html.DisplayFor(modelItem => item.CadastroAtivo)
-                    </td>
-                    <td class="text-end textoCor">
-                        <a asp-action="Edit" asp-route-id="@item.ClienteId" class="text-decoration-none link-light">
+                        <a asp-action="Edit" asp-route-id="@item.ClienteId" class="text-decoration-none textoCor">
                             <svg bootstrap-icon="PencilFill" width="14" height="14" aria-label="Adicionar" class="me-2"></svg>
                         </a>
-                        <a asp-action="Details" asp-route-id="@item.ClienteId" class="text-decoration-none link-light">
+                        <a asp-action="Details" asp-route-id="@item.ClienteId" class="text-decoration-none textoCor">
                             <svg bootstrap-icon="CardList" width="14" height="14" aria-label="Adicionar" class="me-2"></svg>
                         </a>
-                        <a asp-action="Delete" asp-route-id="@item.ClienteId" class="text-decoration-none link-light">
+                        <a asp-action="Delete" asp-route-id="@item.ClienteId" class="text-decoration-none textoCor">
                             <svg bootstrap-icon="Trash2" width="14" height="14" aria-label="Adicionar" class="me-2"></svg>
                         </a>
                     </td>

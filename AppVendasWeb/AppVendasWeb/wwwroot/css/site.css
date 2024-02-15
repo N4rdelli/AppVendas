@@ -22,36 +22,35 @@ body {
 }
 
 .backgroundBody {
-    background: #bdecfd;
+    background: #FFE9E3;
 }
 
 .backgroundNav {
-    background: #34AFDC;
+    background: #E4C2BB;
 }
 
 .textoCor {
-    color: #092029;
+    color: #4B3C41;
 }
 
 .textoLink {
-    color: #fffff6;
+    color: #4B3C41;
     text-transform: uppercase;
     font-weight: bold;
 }
 
     .textoLink:hover {
-        color: #EE3A62;
+        color: #FF307A;
     }
 
 .textoTitulo {
+    color: #EE3A62;
     font-weight: bold;
 }
 
 .bttnClass {
     background: #EE3A62;
     color: #fffff6;
-    text-transform: uppercase;
-    font-weight: bold;
 }
 
     .bttnClass:hover {
